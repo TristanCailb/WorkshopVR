@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using VRTK.UnityEventHelper;
 
 [System.Serializable]
 public struct SMission //Structure de la mission
@@ -11,21 +12,23 @@ public struct SMission //Structure de la mission
     public string description;
     [Tooltip("Type de la Mission")]
     public EMission typeMission;
-    [Tooltip("Objectifs à remplir si la mission est de type Collecte")]
-    public SCollect objectifCollect;
     [Tooltip("Etat de la Mission")]
     public EEtatMission etat;
+    [Tooltip("Objectifs à remplir si la mission est de type Collecter")]
+    public SCollect objectifCollect;
+    [Tooltip("Objectifs à remplir si la mission est de type Placer")]
+    public SPlace objectifPlace;
     [Header("Dépendance")]
     [Tooltip("Si la mission est dépendante d'une autre")]
     public bool isDependant;
-    [Tooltip("Index de la mission dont laquelle cette mission dépend")]
-    public int dependanceMission;
+    [Tooltip("Indexes de la mission dont laquelle cette mission dépend")]
+    public int[] dependancesMission;
     [Tooltip("Si la mission est actuellement affichée")]
     public bool isShow;
 }
 
 [System.Serializable]
-public struct SCollect //Structure mission de collecte
+public class SCollect //Structure mission de collecte
 {
     [Tooltip("Item de Mission à collecter")]
     public SItem item;
@@ -33,11 +36,25 @@ public struct SCollect //Structure mission de collecte
     public int nombreItems;
 }
 
-public enum EMission //Type de mission
+[System.Serializable]
+public class SPlace //Structure mission de placement d'items
+{
+    [Tooltip("Item de mission à placer")]
+    public SItem item;
+    [Tooltip("Nombre d'items à placer")]
+    public int nbItems;
+    [Tooltip("Zones ou placer les items")]
+    public VRTK_SnapDropZone_UnityEvents[] dropZones;
+}
+
+public enum EMission //Types de mission
 {
     Collecter,      //Collecter des items
-    Tuer,           //Tuer un PNJ
-    TrouverPnj      //Trouver un PNJ
+    Placer,         //Placer des items (ex: Caméras)
+    Embeter,        //Embeter un PNJ avec un item qui dérange
+    Blesser,        //Blesser un PNJ avec un item qui blesse
+    Tuer,           //Tuer un PNJ avec un objet qui tue
+    Detruire        //Détruire des objets
 }
 
 public enum EEtatMission //Etat de la mission
