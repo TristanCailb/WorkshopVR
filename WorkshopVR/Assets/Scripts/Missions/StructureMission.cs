@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using VRTK.UnityEventHelper;
 
 [System.Serializable]
@@ -18,6 +19,10 @@ public struct SMission //Structure de la mission
     public SCollect objectifCollect;
     [Tooltip("Objectifs à remplir si la mission est de type Placer")]
     public SPlace objectifPlace;
+    [Tooltip("Objectifs à remplir si la mission est de type Embeter")]
+    public SEmbeter objectifEmbeter;
+    [Tooltip("Objectifs à remplir si la mission est de type Blesser")]
+    public SBlesser objectifBlesser;
     [Header("Dépendance")]
     [Tooltip("Si la mission est dépendante d'une autre")]
     public bool isDependant;
@@ -45,6 +50,24 @@ public class SPlace //Structure mission de placement d'items
     public int nbItems;
     [Tooltip("Zones ou placer les items")]
     public VRTK_SnapDropZone_UnityEvents[] dropZones;
+}
+
+[System.Serializable]
+public class SEmbeter
+{
+    [Tooltip("Les PNJ à embeter dans cette mission")]
+    public List<IAReaction> pnjAEmbeter = new List<IAReaction>();
+    [Tooltip("Nombre de PNJ à embeter")]
+    public int nbPnjAEmbeter;
+}
+
+[System.Serializable]
+public class SBlesser
+{
+    [Tooltip("Les PNJ à blesser dans cette mission")]
+    public List<IAReaction> pnjABlesser = new List<IAReaction>();
+    [Tooltip("Nombre de PNJ à blesser")]
+    public int nbPnjABlesser;
 }
 
 public enum EMission //Types de mission
