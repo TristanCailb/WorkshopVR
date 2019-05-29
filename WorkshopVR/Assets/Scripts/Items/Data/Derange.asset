@@ -15,5 +15,6 @@ MonoBehaviour:
   nom: Derange
   desciption: Cet objet derange les PNJ
   etat: 0
-  type: 2
+  type: 1
   action: 0
+  resistanceImpact: 5

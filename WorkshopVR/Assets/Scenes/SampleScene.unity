@@ -461,6 +461,16 @@ MonoBehaviour:
     objectifBlesser:
       pnjABlesser: []
       nbPnjABlesser: 0
+    objectifTuer:
+      tuerToutLeMonde: 0
+      pnjATuer: []
+      nbPnjATuer: 0
+    objectifDetruire:
+      pourcentage: 0
+      nbItemsMap: 0
+      nbItemsCasses: 0
+      pourcentageActuel: 0
+      itemsInGame: []
     isDependant: 0
     dependancesMission: 
     isShow: 1
@@ -487,6 +497,16 @@ MonoBehaviour:
     objectifBlesser:
       pnjABlesser: []
       nbPnjABlesser: 0
+    objectifTuer:
+      tuerToutLeMonde: 0
+      pnjATuer: []
+      nbPnjATuer: 0
+    objectifDetruire:
+      pourcentage: 0
+      nbItemsMap: 0
+      nbItemsCasses: 0
+      pourcentageActuel: 0
+      itemsInGame: []
     isDependant: 0
     dependancesMission: 
     isShow: 1
@@ -509,6 +529,16 @@ MonoBehaviour:
     objectifBlesser:
       pnjABlesser: []
       nbPnjABlesser: 0
+    objectifTuer:
+      tuerToutLeMonde: 0
+      pnjATuer: []
+      nbPnjATuer: 0
+    objectifDetruire:
+      pourcentage: 0.6
+      nbItemsMap: 0
+      nbItemsCasses: 0
+      pourcentageActuel: 0
+      itemsInGame: []
     isDependant: 1
     dependancesMission: 0000000001000000
     isShow: 0
@@ -535,6 +565,16 @@ MonoBehaviour:
       - {fileID: 1960892424}
       - {fileID: 1425808237}
       nbPnjABlesser: 4
+    objectifTuer:
+      tuerToutLeMonde: 0
+      pnjATuer: []
+      nbPnjATuer: 0
+    objectifDetruire:
+      pourcentage: 0
+      nbItemsMap: 0
+      nbItemsCasses: 0
+      pourcentageActuel: 0
+      itemsInGame: []
     isDependant: 1
     dependancesMission: 000000000100000002000000
     isShow: 0
@@ -556,6 +596,21 @@ MonoBehaviour:
     objectifBlesser:
       pnjABlesser: []
       nbPnjABlesser: 0
+    objectifTuer:
+      tuerToutLeMonde: 1
+      pnjATuer:
+      - {fileID: 941716111}
+      - {fileID: 450686513}
+      - {fileID: 1401522762}
+      - {fileID: 1960892424}
+      - {fileID: 1425808237}
+      nbPnjATuer: 0
+    objectifDetruire:
+      pourcentage: 0
+      nbItemsMap: 0
+      nbItemsCasses: 0
+      pourcentageActuel: 0
+      itemsInGame: []
     isDependant: 1
     dependancesMission: 00000000010000000200000003000000
     isShow: 0
@@ -5081,6 +5136,12 @@ PrefabInstance:
       propertyPath: ignoredColliders.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7984979895137398833, guid: d6ad19b0337cb5b48b9031c6447822c2,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f25653489c5b4f4b8fb0d3aa368c017,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6ad19b0337cb5b48b9031c6447822c2, type: 3}
 --- !u!1001 &2111556994563949417

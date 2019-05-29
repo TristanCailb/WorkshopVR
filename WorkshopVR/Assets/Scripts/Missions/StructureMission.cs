@@ -23,6 +23,10 @@ public struct SMission //Structure de la mission
     public SEmbeter objectifEmbeter;
     [Tooltip("Objectifs à remplir si la mission est de type Blesser")]
     public SBlesser objectifBlesser;
+    [Tooltip("Objectifs à remplir si la mission est de type Tuer")]
+    public STuer objectifTuer;
+    [Tooltip("Objectifs à remplir si la mission est de type Détruire")]
+    public SDetruire objectifDetruire;
     [Header("Dépendance")]
     [Tooltip("Si la mission est dépendante d'une autre")]
     public bool isDependant;
@@ -53,7 +57,7 @@ public class SPlace //Structure mission de placement d'items
 }
 
 [System.Serializable]
-public class SEmbeter
+public class SEmbeter //Structure de la mission où on embete les PNJ
 {
     [Tooltip("Les PNJ à embeter dans cette mission")]
     public List<IAReaction> pnjAEmbeter = new List<IAReaction>();
@@ -62,12 +66,66 @@ public class SEmbeter
 }
 
 [System.Serializable]
-public class SBlesser
+public class SBlesser //Structure de la mission ou on blesse les PNJ
 {
     [Tooltip("Les PNJ à blesser dans cette mission")]
     public List<IAReaction> pnjABlesser = new List<IAReaction>();
     [Tooltip("Nombre de PNJ à blesser")]
     public int nbPnjABlesser;
+}
+
+[System.Serializable]
+public class STuer //Structure de la mission ou on tue les PNJ
+{
+    [Tooltip("Si on doit tuer tous les PNJ")]
+    public bool tuerToutLeMonde;
+    [Tooltip("Les PNJ à tuer dans cette mission")]
+    public List<IAReaction> pnjATuer = new List<IAReaction>();
+    [Tooltip("Nombre de PNJ à tuer, laisser à 0 si on doit tuer tout le monde")]
+    public int nbPnjATuer;
+}
+
+[System.Serializable]
+public class SDetruire //Structure de la mission de destruction d'objets
+{
+    [Tooltip("Pourcentage d'objets à détruire (entre 0 et 1)")]
+    [Range(0f, 1f)] public float pourcentage;
+    [Tooltip("Laisser ce nombre à 0, il est initialisé tout seul au début du jeu")]
+    public int nbItemsMap; //Nombre d'items qu'il y a sur la map
+    [Tooltip("Nombre d'items cassés dans la map, ne pas remplir à la main")]
+    public float nbItemsCasses;
+    [Tooltip("Pourcentage actuel d'objets détruits")]
+    [Range(0f, 1f)] public float pourcentageActuel;
+    [Tooltip("Liste des items en jeu, ne pas remplir à la main")]
+    public List<Item> itemsInGame = new List<Item>();
+
+    public void InitNombreItemsMap() //Récupérer le nombre d'items présents sur la map
+    {
+        itemsInGame = new List<Item>();
+        foreach(Item i in GameObject.FindObjectsOfType<Item>())
+        {
+            if(i.item.type == EItemType.Destructible)
+            {
+                itemsInGame.Add(i);
+            }
+        }
+        nbItemsMap = itemsInGame.Count;
+    }
+
+    public void RefreshPourcentageDestruction()
+    {
+        float a = itemsInGame.Count; //Nombre d'items en jeu
+        nbItemsCasses = 0f;
+        foreach(Item i in itemsInGame)
+        {
+            if(i.item.etat == EItemEtat.Casse)
+            {
+                nbItemsCasses++;
+            }
+        }
+        
+        pourcentageActuel = nbItemsCasses / a;
+    }
 }
 
 public enum EMission //Types de mission

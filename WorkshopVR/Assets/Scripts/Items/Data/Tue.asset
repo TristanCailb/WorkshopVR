@@ -15,5 +15,6 @@ MonoBehaviour:
   nom: Tue
   desciption: 
   etat: 0
-  type: 2
+  type: 1
   action: 2
+  resistanceImpact: 5

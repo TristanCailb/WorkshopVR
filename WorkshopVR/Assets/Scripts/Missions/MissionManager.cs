@@ -27,6 +27,16 @@ public class MissionManager : MonoBehaviour
                     dz.OnObjectSnappedToDropZone.AddListener(delegate { CheckPlaceMission(dz.GetComponent<VRTK_SnapDropZone>()); });
                 }
             }
+
+            if(m.typeMission == EMission.Tuer && m.objectifTuer.tuerToutLeMonde)
+            {
+                m.objectifTuer.nbPnjATuer = m.objectifTuer.pnjATuer.Count; //Initialiser le nombre de PNJ à tuer si on doit tous les tuer
+            }
+
+            if(m.typeMission == EMission.Detruire)
+            {
+                m.objectifDetruire.InitNombreItemsMap(); //Initialiser le nombre d'items sur la map
+            }
         }
     }
 
@@ -142,13 +152,41 @@ public class MissionManager : MonoBehaviour
                                 mission.objectifBlesser.pnjABlesser.Remove(pnjTouche); //Retirer le PNJ de la liste
                                 if (mission.objectifBlesser.nbPnjABlesser == 0) //Si on a blessé assez de PNJ alors mission réussie
                                 {
-                                    Debug.Log("Mission OK");
+                                    CompleterMission(i);
+                                }
+                            }
+                            break;
+
+                        case EMission.Tuer:
+                            if(mission.objectifTuer.pnjATuer.Contains(pnjTouche)) //Si le PNJ touché fait partie de la liste
+                            {
+                                mission.objectifTuer.nbPnjATuer--; //Diminuer le nombre de pnj à tuer
+                                mission.objectifTuer.pnjATuer.Remove(pnjTouche); //Retirer le PNJ de la liste
+                                if (mission.objectifTuer.nbPnjATuer == 0) //Si on a tué assez de PNJ alors mission réussie
+                                {
                                     CompleterMission(i);
                                 }
                             }
                             break;
                         default: break;
                     }
+                }
+            }
+        }
+    }
+
+    public void CheckDestructionMission()
+    {
+        for (int i = 0; i < missions.Length; i++)
+        {
+            SMission mission = missions[i]; //mission actuellement vérifiée
+            if (mission.typeMission == EMission.Detruire && mission.etat == EEtatMission.Active) //Si c'est une mission de destruction active
+            {
+                mission.objectifDetruire.RefreshPourcentageDestruction(); //Refresh le nombre d'objets détruits
+                if(mission.objectifDetruire.pourcentageActuel >= mission.objectifDetruire.pourcentage) //Si le pourcentage d'objets détruits est bon
+                {
+                    CompleterMission(i);
+                    Debug.Log("Mission OK");
                 }
             }
         }

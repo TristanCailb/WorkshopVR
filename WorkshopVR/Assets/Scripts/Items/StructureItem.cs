@@ -6,13 +6,13 @@ public class SItem : UnityEngine.ScriptableObject //Structure de l'item
     public EItemEtat etat;          //Etat de l'item
     public EItemType type;          //Type d'item
     public EItemAction action;      //Action de l'item sur PNJ
+    public float resistanceImpact = 10f;  //Résistance aux impacts avant de casser
 }
 
 public enum EItemType //Types d'items
 {
-    ObjetDeMission,
-    Consommable,
-    Autre
+    NonDestructible,
+    Destructible
 }
 
 public enum EItemEtat

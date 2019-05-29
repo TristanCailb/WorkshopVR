@@ -16,7 +16,7 @@ public class IAReaction : MonoBehaviour
                     OnBlesse(item);
                     break;
                 case EItemAction.Tue:
-                    OnTue();
+                    OnTue(item);
                     break;
                 default: break;
             }
@@ -25,18 +25,16 @@ public class IAReaction : MonoBehaviour
 
     public void OnDerange(Item item)
     {
-        Debug.Log("PNJ Dérangé");
         MissionManager.instance.CheckReactionMission(item, EItemAction.Derange, this);
     }
 
     public void OnBlesse(Item item)
     {
-        Debug.Log("PNJ Blessé");
         MissionManager.instance.CheckReactionMission(item, EItemAction.Blesse, this);
     }
 
-    public void OnTue()
+    public void OnTue(Item item)
     {
-        Debug.Log("PNJ Tué");
+        MissionManager.instance.CheckReactionMission(item, EItemAction.Tue, this);
     }
 }

@@ -17,3 +17,4 @@ MonoBehaviour:
   etat: 0
   type: 0
   action: 0
+  resistanceImpact: 5

@@ -15,5 +15,6 @@ MonoBehaviour:
   nom: Blesse
   desciption: 
   etat: 0
-  type: 2
+  type: 1
   action: 1
+  resistanceImpact: 5
