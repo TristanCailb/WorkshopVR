@@ -24,7 +24,38 @@ public class ScrollRectSnap : MonoBehaviour
     {
         for(int i = 0; i < menus.Length; i++)
         {
-            distances[i] = Mathf.Abs(centerToCompare.transform.position.x - menus[i].transform.position.x);
+            distances[i] = Mathf.Abs(centerToCompare.transform.position.x - menus[i].transform.position.x); //Actualiser les distances des menus par rapport au centre
         }
+        float minDistance = Mathf.Min(distances); //Récupérer la distance la plus petite
+        for (int a = 0; a < menus.Length; a++)
+        {
+            if(minDistance == distances[a])
+            {
+                minMenuIndex = a; //Actualiser l'index du menu le plus proche du centre
+            }
+        }
+
+        if(!dragging)
+        {
+            LerpToMenu(minMenuIndex * -menusDistance);
+        }
+    }
+
+    private void LerpToMenu(int position)
+    {
+        float newX = Mathf.Lerp(menusHolder.anchoredPosition.x, position, Time.deltaTime * 2f); //Lerp la nouvelle position
+        Vector2 newPos = new Vector2(newX, menusHolder.anchoredPosition.y);
+
+        menusHolder.anchoredPosition = newPos;
+    }
+
+    public void StartDrag()
+    {
+        dragging = true;
+    }
+
+    public void EndDrag()
+    {
+        dragging = false;
     }
 }
