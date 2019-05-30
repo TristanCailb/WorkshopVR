@@ -62,12 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\IAReaction.cs" />
+    <Compile Include="Assets\Scripts\IA\IAReaction.cs" />
     <Compile Include="Assets\Scripts\Items\Item.cs" />
     <Compile Include="Assets\Scripts\Items\StructureItem.cs" />
     <Compile Include="Assets\Scripts\Missions\MissionManager.cs" />
     <Compile Include="Assets\Scripts\Missions\StructureMission.cs" />
-    <Compile Include="Assets\Scripts\TestCollect.cs" />
+    <Compile Include="Assets\Scripts\UIMontre\ScrollRectSnap.cs" />
+    <Compile Include="Assets\Scripts\UIMontre\ToggleUIMode.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
