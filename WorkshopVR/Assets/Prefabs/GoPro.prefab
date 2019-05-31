@@ -32,7 +32,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3396692031829658592}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.4204, y: 1.299, z: 0.417}
   m_LocalScale: {x: 0.08731999, y: 0.08731999, z: 0.08731999}
   m_Children:
@@ -113,8 +113,7 @@ MonoBehaviour:
   disableWhenIdle: 1
   allowedNearTouchControllers: 0
   allowedTouchControllers: 0
-  ignoredColliders:
-  - {fileID: 0}
+  ignoredColliders: []
   isGrabbable: 1
   holdButtonToGrab: 0
   stayGrabbedOnTeleport: 1
@@ -212,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34d9d37197f87f447ad0d505506fc448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 7bc3673c76e5bd2459d5839dff3dd824, type: 2}
 --- !u!1 &8954172623101259635
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +278,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: bc718240f72cc7e439c7a6c6839761d7, type: 2}
   m_TargetDisplay: 0
-  m_TargetEye: 3
+  m_TargetEye: 0
   m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
