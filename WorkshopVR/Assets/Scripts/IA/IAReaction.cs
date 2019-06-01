@@ -2,6 +2,13 @@
 
 public class IAReaction : MonoBehaviour
 {
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();    
+    }
+
     void OnCollisionEnter(Collision col)
     {
         if(col.collider.GetComponent<Item>() != null)
@@ -25,16 +32,19 @@ public class IAReaction : MonoBehaviour
 
     public void OnDerange(Item item)
     {
+        animator.SetBool("IsDerange", true);
         MissionManager.instance.CheckReactionMission(item, EItemAction.Derange, this);
     }
 
     public void OnBlesse(Item item)
     {
+        animator.SetBool("IsBlesse", true);
         MissionManager.instance.CheckReactionMission(item, EItemAction.Blesse, this);
     }
 
     public void OnTue(Item item)
     {
+        animator.SetBool("IsTue", true);
         MissionManager.instance.CheckReactionMission(item, EItemAction.Tue, this);
     }
 }
