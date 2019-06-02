@@ -16,11 +16,13 @@ public class PatronController : MonoBehaviour
     private Animator animator;
     [Header("Détection Joueur")]
     public Transform player;                //Joueur à détecter
+    private DetectPlayerZone playerZone;    //Detection du joueur à son bureau
     public float maxAngle = 45f;            //Angle de vue de l'IA
     public float maxRadius = 15f;           //Rayon de détection
     public float delayBetweenCheck = 0.1f;  //Délai entre les vérifications de détection
     private float sdbc;                     //Save Delay Between Check
     public bool playerInFov;                //Si le joueur est visible de l'IA
+    public bool playerFired;                //Si le joueur est attrappé à faire des choses illégales
 
 
     void Start()
@@ -29,6 +31,7 @@ public class PatronController : MonoBehaviour
         animator = GetComponent<Animator>();
         sncbh = nbCheckpointsBeforeHome;
         sdbc = delayBetweenCheck;
+        playerZone = player.GetComponent<DetectPlayerZone>();
     }
 
     void Update()
@@ -49,6 +52,14 @@ public class PatronController : MonoBehaviour
         else
         {
             playerInFov = InFov(transform, player, maxAngle, maxRadius); //Vérifier si l'IA voit le joueur
+            if(playerInFov)
+            {
+                Debug.Log("Joueur vu");
+                //Si le joueur a un item illégal ou qu'il n'est pas dans sa zone alors il est viré
+                playerFired = playerZone.hasIllegalItem || !playerZone.playerInZone;
+                if (playerFired)
+                    Debug.Log("Joueur viré");
+            }
             sdbc = delayBetweenCheck;
         }
     }
@@ -90,11 +101,10 @@ public class PatronController : MonoBehaviour
         }
     }
 
-    [SerializeField] Collider[] overlaps;
     //Checking Object est l'IA qui vérifie, la Target est le joueur, le max angle est le FOV, Max Radius est le rayon de détection
     public bool InFov(Transform checkingObject, Transform target, float _maxAngle, float _maxRadius)
     {
-        overlaps = new Collider[10]; //Objets qui sont dans la zone de détection du patron
+        Collider[] overlaps = new Collider[10]; //Objets qui sont dans la zone de détection du patron
         int count = Physics.OverlapSphereNonAlloc(checkingObject.position, _maxRadius, overlaps); //Stocker les objets détectés dans l'array
         for (int i = 0; i < count; i++)
         {

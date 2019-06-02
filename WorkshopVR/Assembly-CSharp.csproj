@@ -67,6 +67,7 @@
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
     <Compile Include="Assets\Scripts\AnimEvents.cs" />
+    <Compile Include="Assets\Scripts\DetectPlayerZone.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\IA\Behaviours\IdleBureauBehaviour.cs" />
     <Compile Include="Assets\Scripts\IA\Behaviours\IdlePatrouilleBehavoiur.cs" />
