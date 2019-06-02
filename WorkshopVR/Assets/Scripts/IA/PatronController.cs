@@ -120,7 +120,7 @@ public class PatronController : MonoBehaviour
                     {
                         Ray ray = new Ray(checkingObject.position, target.position - checkingObject.position);
                         RaycastHit hit;
-                        if (Physics.Raycast(ray, out hit, _maxRadius, layerDetectables))
+                        if (Physics.Raycast(ray, out hit, _maxRadius))
                         {
                             if (hit.transform == target) //Si le raycast touche le joueur, alors l'IA voit le joueur
                             {
