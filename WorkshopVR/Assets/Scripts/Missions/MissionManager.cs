@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using VRTK;
 using VRTK.UnityEventHelper;
 
@@ -6,6 +7,17 @@ public class MissionManager : MonoBehaviour
 {
     public static MissionManager instance;      //Singleton
     public SMission[] missions;                 //Missions à effectuer
+    [Header("HUD")]
+    public VerticalLayoutGroup missionsHolder;  //Le conteneur des missions sur le HUD
+    public GameObject missionHudPrefab;         //Prefab du HUD de mission
+    public Image pbFillBurnout;                 //Progress Bar du Burnout dans le HUD
+    public Text txtPourcentageBurnout;          //Texte du pourcentage de Burnout dans le HUD
+
+    private float normMissionProgress;          //Progression dans les missions (entre 0 et 1) : missionsCompletes / totalMissions
+    private float totalMissions;                //Nombre total de missions
+    private float missionsCompletes;            //Nombre de missions réussie
+    private int pourcentageBurnout;             //Pourcentage du Burnout : Mathf.Round(normMissionProgress * 100f)
+
 
     #region Singleton
     void Awake()
@@ -37,19 +49,41 @@ public class MissionManager : MonoBehaviour
             {
                 m.objectifDetruire.InitNombreItemsMap(); //Initialiser le nombre d'items sur la map
             }
+
+            totalMissions = missions.Length;
+            RefreshHUDMissions();
+            RefreshHUDBurnout();
         }
     }
 
     public void ActiverMission(int index)
     {
-        missions[index].etat = EEtatMission.Active;
-        missions[index].isShow = true;
+        missions[index].etat = EEtatMission.Active; //Activer la mission
+        missions[index].isShow = true; //Boolean de debug pour éviter que la mission reste active
     }
 
     public void CompleterMission(int index)
     {
-        missions[index].etat = EEtatMission.Completee;
-        RefreshMissionsActives();
+        missions[index].etat = EEtatMission.Completee; //Compléter la mission
+        RefreshMissionsActives(); //Raffraichir la liste des missions actives
+        RefreshHUDMissions(); //Refresh Ecran des Missions
+        RefreshHUDBurnout(); //Refresh Jauge de Burnout
+    }
+
+    public void RefreshHUDBurnout()
+    {
+        missionsCompletes = 0f;
+        foreach(SMission m in missions)
+        {
+            if(m.etat == EEtatMission.Completee)
+            {
+                missionsCompletes++;
+            }
+        }
+        normMissionProgress = missionsCompletes / totalMissions;
+        pbFillBurnout.fillAmount = normMissionProgress;
+        pourcentageBurnout = (int) Mathf.Round(normMissionProgress * 100f);
+        txtPourcentageBurnout.text = pourcentageBurnout.ToString() + "%";
     }
 
     public void RefreshMissionsActives()
@@ -64,6 +98,30 @@ public class MissionManager : MonoBehaviour
                 {
                     ActiverMission(i);
                 }
+            }
+        }
+    }
+
+    public void RefreshHUDMissions()
+    {
+        for(int i = 0; i < missionsHolder.transform.childCount; i++) //Vider la liste des missions dans le HUD
+        {
+            Transform child = missionsHolder.transform.GetChild(i);
+            Destroy(child.gameObject);
+        }
+
+        foreach(SMission m in missions)
+        {
+            if(m.etat == EEtatMission.Active)
+            {
+                //Créer le prefab de mission HUD
+                GameObject hud = Instantiate(missionHudPrefab, missionsHolder.transform.position, missionsHolder.transform.rotation, missionsHolder.transform);
+                Text titre = hud.transform.Find("TXT_Titre").GetComponent<Text>(); //Récupérer le titre
+                Text description = hud.transform.Find("TXT_Description").GetComponent<Text>(); //Récupérer la description
+                Text objectif = hud.transform.Find("TXT_Objectifs").GetComponent<Text>(); //Récupérer les objectifs
+                titre.text = m.titre; //Ecrire le titre dans le HUD
+                description.text = m.description; //Ecrire la description dans le HUD
+                objectif.text = "Objectif :\n  - " + m.objectif; //Ecrire l'objectif dans le HUD
             }
         }
     }
@@ -186,7 +244,6 @@ public class MissionManager : MonoBehaviour
                 if(mission.objectifDetruire.pourcentageActuel >= mission.objectifDetruire.pourcentage) //Si le pourcentage d'objets détruits est bon
                 {
                     CompleterMission(i);
-                    Debug.Log("Mission OK");
                 }
             }
         }

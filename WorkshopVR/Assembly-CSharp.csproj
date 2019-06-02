@@ -62,7 +62,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+    <Compile Include="Assets\Scripts\AnimEvents.cs" />
+    <Compile Include="Assets\Scripts\DetectPlayerZone.cs" />
+    <Compile Include="Assets\Scripts\FollowPlayer.cs" />
+    <Compile Include="Assets\Scripts\IA\Behaviours\IdleBureauBehaviour.cs" />
+    <Compile Include="Assets\Scripts\IA\Behaviours\IdlePatrouilleBehavoiur.cs" />
+    <Compile Include="Assets\Scripts\IA\Behaviours\PatrouilleBehaviour.cs" />
     <Compile Include="Assets\Scripts\IA\IAReaction.cs" />
+    <Compile Include="Assets\Scripts\IA\PatronController.cs" />
     <Compile Include="Assets\Scripts\Items\Item.cs" />
     <Compile Include="Assets\Scripts\Items\StructureItem.cs" />
     <Compile Include="Assets\Scripts\Missions\MissionManager.cs" />

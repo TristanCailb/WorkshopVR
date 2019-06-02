@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7760841238988546607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7760841238988546604}
+  - component: {fileID: 7760841238988546605}
+  m_Layer: 0
+  m_Name: MissionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7760841238988546604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7760841238988546607}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7760841238988546605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7760841238988546607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb529b7d61d9624c9d8e8570ecd9f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missions:
+  - titre: Surveillance
+    objectif: "Placer 4 Cam\xE9ras"
+    description: "Place les 4 Cam\xE9ras \xE0 des lieux strat\xE9giques pour surveiller
+      les all\xE9es et venues du patron"
+    typeMission: 1
+    etat: 1
+    objectifCollect:
+      item: {fileID: 0}
+      nombreItems: 0
+    objectifPlace:
+      item: {fileID: 11400000, guid: 7bc3673c76e5bd2459d5839dff3dd824, type: 2}
+      nbItems: 4
+      dropZones:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+    objectifEmbeter:
+      pnjAEmbeter: []
+      nbPnjAEmbeter: 0
+    objectifBlesser:
+      pnjABlesser: []
+      nbPnjABlesser: 0
+    objectifTuer:
+      tuerToutLeMonde: 0
+      pnjATuer: []
+      nbPnjATuer: 0
+    objectifDetruire:
+      pourcentage: 0
+      nbItemsMap: 0
+      nbItemsCasses: 0
+      pourcentageActuel: 0
+      itemsInGame: []
+    isDependant: 0
+    dependancesMission: 
+    isShow: 1
+  - titre: Le Mec Chiant
+    objectif: "Emb\xEAter 5 de tes coll\xE8gues"
+    description: "Em\xEAtes tes coll\xE8gues en leur jetant des objets l\xE9gers."
+    typeMission: 2
+    etat: 1
+    objectifCollect:
+      item: {fileID: 0}
+      nombreItems: 0
+    objectifPlace:
+      item: {fileID: 0}
+      nbItems: 0
+      dropZones: []
+    objectifEmbeter:
+      pnjAEmbeter:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      nbPnjAEmbeter: 5
+    objectifBlesser:
+      pnjABlesser: []
+      nbPnjABlesser: 0
+    objectifTuer:
+      tuerToutLeMonde: 0
+      pnjATuer: []
+      nbPnjATuer: 0
+    objectifDetruire:
+      pourcentage: 0
+      nbItemsMap: 0
+      nbItemsCasses: 0
+      pourcentageActuel: 0
+      itemsInGame: []
+    isDependant: 0
+    dependancesMission: 
+    isShow: 1
+  - titre: Le Destructeur
+    objectif: "D\xE9truire 60% des Objets de l'Open Space"
+    description: "D\xE9truits des objets dans l'Open Space. Utilise ton imagination
+      !"
+    typeMission: 5
+    etat: 0
+    objectifCollect:
+      item: {fileID: 0}
+      nombreItems: 0
+    objectifPlace:
+      item: {fileID: 0}
+      nbItems: 0
+      dropZones: []
+    objectifEmbeter:
+      pnjAEmbeter: []
+      nbPnjAEmbeter: 0
+    objectifBlesser:
+      pnjABlesser: []
+      nbPnjABlesser: 0
+    objectifTuer:
+      tuerToutLeMonde: 0
+      pnjATuer: []
+      nbPnjATuer: 0
+    objectifDetruire:
+      pourcentage: 0.6
+      nbItemsMap: 0
+      nbItemsCasses: 0
+      pourcentageActuel: 0
+      itemsInGame: []
+    isDependant: 1
+    dependancesMission: 0000000001000000
+    isShow: 0
+  - titre: Ca Devient Blessant...
+    objectif: "Blesser 4 de tes coll\xE8gues avec des objets contondants"
+    description: "Utilise toutes sortes d'objet pour blesser tes coll\xE8gues"
+    typeMission: 3
+    etat: 0
+    objectifCollect:
+      item: {fileID: 0}
+      nombreItems: 0
+    objectifPlace:
+      item: {fileID: 0}
+      nbItems: 0
+      dropZones: []
+    objectifEmbeter:
+      pnjAEmbeter: []
+      nbPnjAEmbeter: 0
+    objectifBlesser:
+      pnjABlesser:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      nbPnjABlesser: 4
+    objectifTuer:
+      tuerToutLeMonde: 0
+      pnjATuer: []
+      nbPnjATuer: 0
+    objectifDetruire:
+      pourcentage: 0
+      nbItemsMap: 0
+      nbItemsCasses: 0
+      pourcentageActuel: 0
+      itemsInGame: []
+    isDependant: 1
+    dependancesMission: 000000000100000002000000
+    isShow: 0
+  - titre: Burnout!!!
+    objectif: Tuer tout le monde
+    description: "Utilise ton imagination pour tuer tous tes coll\xE8gues"
+    typeMission: 4
+    etat: 0
+    objectifCollect:
+      item: {fileID: 0}
+      nombreItems: 0
+    objectifPlace:
+      item: {fileID: 0}
+      nbItems: 0
+      dropZones: []
+    objectifEmbeter:
+      pnjAEmbeter: []
+      nbPnjAEmbeter: 0
+    objectifBlesser:
+      pnjABlesser: []
+      nbPnjABlesser: 0
+    objectifTuer:
+      tuerToutLeMonde: 1
+      pnjATuer:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      nbPnjATuer: 0
+    objectifDetruire:
+      pourcentage: 0
+      nbItemsMap: 0
+      nbItemsCasses: 0
+      pourcentageActuel: 0
+      itemsInGame: []
+    isDependant: 1
+    dependancesMission: 00000000010000000200000003000000
+    isShow: 0
+  missionsHolder: {fileID: 0}
+  missionHudPrefab: {fileID: 2710997897662884365, guid: ff7aeefafef0dc34a99b8e0b20ce3c68,
+    type: 3}
+  pbFillBurnout: {fileID: 0}
+  txtPourcentageBurnout: {fileID: 0}
