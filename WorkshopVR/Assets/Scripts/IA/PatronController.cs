@@ -17,6 +17,7 @@ public class PatronController : MonoBehaviour
     [Header("Détection Joueur")]
     public Transform player;                //Joueur à détecter
     private DetectPlayerZone playerZone;    //Detection du joueur à son bureau
+    public LayerMask layerDetectables;      //Objets détectables par le patron
     public float maxAngle = 45f;            //Angle de vue de l'IA
     public float maxRadius = 15f;           //Rayon de détection
     public float delayBetweenCheck = 0.1f;  //Délai entre les vérifications de détection
@@ -105,7 +106,7 @@ public class PatronController : MonoBehaviour
     public bool InFov(Transform checkingObject, Transform target, float _maxAngle, float _maxRadius)
     {
         Collider[] overlaps = new Collider[10]; //Objets qui sont dans la zone de détection du patron
-        int count = Physics.OverlapSphereNonAlloc(checkingObject.position, _maxRadius, overlaps); //Stocker les objets détectés dans l'array
+        int count = Physics.OverlapSphereNonAlloc(checkingObject.position, _maxRadius, overlaps, layerDetectables); //Stocker les objets détectés dans l'array
         for (int i = 0; i < count; i++)
         {
             if (overlaps[i] != null)
@@ -119,7 +120,7 @@ public class PatronController : MonoBehaviour
                     {
                         Ray ray = new Ray(checkingObject.position, target.position - checkingObject.position);
                         RaycastHit hit;
-                        if (Physics.Raycast(ray, out hit, _maxRadius))
+                        if (Physics.Raycast(ray, out hit, _maxRadius, layerDetectables))
                         {
                             if (hit.transform == target) //Si le raycast touche le joueur, alors l'IA voit le joueur
                             {
