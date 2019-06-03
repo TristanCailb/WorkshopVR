@@ -38,13 +38,13 @@ public class IAReaction : MonoBehaviour
 
     public void OnBlesse(Item item)
     {
-        animator.SetBool("IsBlesse", true);
+        animator.SetBool("IsHurt", true);
         MissionManager.instance.CheckReactionMission(item, EItemAction.Blesse, this);
     }
 
     public void OnTue(Item item)
     {
-        animator.SetBool("IsTue", true);
+        animator.SetBool("IsDead", true);
         MissionManager.instance.CheckReactionMission(item, EItemAction.Tue, this);
     }
 }
