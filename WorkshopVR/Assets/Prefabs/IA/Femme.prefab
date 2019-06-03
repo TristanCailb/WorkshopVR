@@ -649,6 +649,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f734a4dd2998d1499f2e93beffa8c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  generateRandomColors: 1
+  genre: 1
+  couleursHaut:
+  - {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
+  - {r: 1, g: 0.3766535, b: 0, a: 1}
+  - {r: 0.47909287, g: 0, b: 0.754717, a: 1}
+  - {r: 0, g: 0.36487365, b: 1, a: 1}
+  - {r: 0.374466, g: 0.8018868, b: 0.53644747, a: 1}
+  couleursBas:
+  - {r: 0, g: 0.062007885, b: 0.745283, a: 1}
+  - {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+  - {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+  - {r: 0.6179246, g: 0.9960564, b: 1, a: 1}
+  meshRenderer: {fileID: 3134734848478012007}
 --- !u!1 &3471598889265686440
 GameObject:
   m_ObjectHideFlags: 0

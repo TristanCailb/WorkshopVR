@@ -477,31 +477,31 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: IsFear
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: IsDeadByGun
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: IsDead
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: IsHurt
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -532,7 +532,7 @@ AnimatorStateMachine:
     m_Position: {x: -420, y: 400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -582820275771610947}
-    m_Position: {x: 30, y: 390, z: 0}
+    m_Position: {x: 30, y: 360, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2880512188980355761}
     m_Position: {x: -420, y: 630, z: 0}
@@ -541,10 +541,10 @@ AnimatorStateMachine:
     m_Position: {x: -420, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5748314129316411007}
-    m_Position: {x: 270, y: 670, z: 0}
+    m_Position: {x: 310, y: 630, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3215389070523783861}
-    m_Position: {x: 330, y: 590, z: 0}
+    m_Position: {x: 310, y: 540, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
