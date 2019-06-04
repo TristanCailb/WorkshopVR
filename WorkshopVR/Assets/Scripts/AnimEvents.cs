@@ -18,4 +18,9 @@ public class AnimEvents : MonoBehaviour
     {
         animator.SetBool("IsBlesse", false);
     }
+
+    public void DisableCollisions()
+    {
+        GetComponent<Collider>().enabled = false;
+    }
 }

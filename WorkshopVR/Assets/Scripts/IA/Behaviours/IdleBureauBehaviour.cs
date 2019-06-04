@@ -8,7 +8,7 @@ public class IdleBureauBehaviour : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        patron = animator.GetComponent<PatronController>();
+        patron = animator.transform.parent.GetComponent<PatronController>();
         delaiIdle = patron.delaiIdleBureau;
         patron.etat = PatronState.IdleBureau;
         patron.SetNextCheckpointToReach();
