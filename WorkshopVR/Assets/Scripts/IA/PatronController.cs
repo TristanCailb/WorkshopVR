@@ -3,28 +3,29 @@ using UnityEngine.AI;
 
 public class PatronController : MonoBehaviour
 {
-    private NavMeshAgent agent;             //Composant qui sert à l'IA à se déplacer
+    private NavMeshAgent agent;                         //Composant qui sert à l'IA à se déplacer
     [Header("Déplacement")]
-    public PatronState etat;                //Etat actuel du patron
-    public Transform home;                  //Checkpoint du bureau du patron
-    public Transform[] checkpoints;         //Points de passages du patron
-    public int nbCheckpointsBeforeHome;     //Nombre de points de passage à passer avant de revenir au bureau
-    private int sncbh;                      //Save Nombre Checkpoint Before Home
-    public Transform nextCpToReach;         //Prochain checkpoint à atteindre
-    public float delaiIdlePatrouille = 3f;  //Temps d'attente au checkpoint
-    public float delaiIdleBureau = 10f;     //Temps d'attente au bureau
+    public PatronState etat;                            //Etat actuel du patron
+    public Transform home;                              //Checkpoint du bureau du patron
+    public Transform[] checkpoints;                     //Points de passages du patron
+    public int nbCheckpointsBeforeHome;                 //Nombre de points de passage à passer avant de revenir au bureau
+    private int sncbh;                                  //Save Nombre Checkpoint Before Home
+    public Transform nextCpToReach;                     //Prochain checkpoint à atteindre
+    public float delaiIdlePatrouille = 3f;              //Temps d'attente au checkpoint
+    public float delaiIdleBureau = 10f;                 //Temps d'attente au bureau
     private Animator animator;
     [Header("Détection Joueur")]
-    public Transform player;                //Joueur à détecter
-    private DetectPlayerZone playerZone;    //Detection du joueur à son bureau
-    public LayerMask layerDetectables;      //Objets détectables par le patron
-    public float maxAngle = 45f;            //Angle de vue de l'IA
-    public float maxRadius = 15f;           //Rayon de détection
-    public float delayBetweenCheck = 0.1f;  //Délai entre les vérifications de détection
-    private float sdbc;                     //Save Delay Between Check
-    public bool canFirePlayer = true;       //Si le patron peut virer le joueur
-    public bool playerInFov;                //Si le joueur est visible de l'IA
-    public bool playerFired;                //Si le joueur est attrappé à faire des choses illégales
+    public Transform player;                            //Joueur à détecter
+    private DetectPlayerZone playerZone;                //Detection du joueur à son bureau
+    public LayerMask layerDetectablesColliders;         //Objets détectables par le patron
+    public LayerMask layerDetectablesRaycast;           //Objets détectables par le patron
+    public float maxAngle = 45f;                        //Angle de vue de l'IA
+    public float maxRadius = 15f;                       //Rayon de détection
+    public float delayBetweenCheck = 0.1f;              //Délai entre les vérifications de détection
+    private float sdbc;                                 //Save Delay Between Check
+    public bool canFirePlayer = true;                   //Si le patron peut virer le joueur
+    public bool playerInFov;                            //Si le joueur est visible de l'IA
+    public bool playerFired;                            //Si le joueur est attrappé à faire des choses illégales
 
 
     void Start()
@@ -107,7 +108,7 @@ public class PatronController : MonoBehaviour
     public bool InFov(Transform checkingObject, Transform target, float _maxAngle, float _maxRadius)
     {
         Collider[] overlaps = new Collider[10]; //Objets qui sont dans la zone de détection du patron
-        int count = Physics.OverlapSphereNonAlloc(checkingObject.position, _maxRadius, overlaps, layerDetectables); //Stocker les objets détectés dans l'array
+        int count = Physics.OverlapSphereNonAlloc(checkingObject.position, _maxRadius, overlaps, layerDetectablesColliders); //Stocker les objets détectés dans l'array
         for (int i = 0; i < count; i++)
         {
             if (overlaps[i] != null)
@@ -121,7 +122,7 @@ public class PatronController : MonoBehaviour
                     {
                         Ray ray = new Ray(checkingObject.position, target.position - checkingObject.position);
                         RaycastHit hit;
-                        if (Physics.Raycast(ray, out hit, _maxRadius))
+                        if (Physics.Raycast(ray, out hit, _maxRadius, layerDetectablesRaycast))
                         {
                             if (hit.transform == target) //Si le raycast touche le joueur, alors l'IA voit le joueur
                             {

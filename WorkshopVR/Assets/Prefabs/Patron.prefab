@@ -91,16 +91,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   nbCheckpointsBeforeHome: 4
   nextCpToReach: {fileID: 0}
   delaiIdlePatrouille: 3
   delaiIdleBureau: 10
   player: {fileID: 0}
-  layerDetectables:
+  layerDetectablesColliders:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 3127
+  layerDetectablesRaycast:
+    serializedVersion: 2
+    m_Bits: 1591
   maxAngle: 45
-  maxRadius: 15
+  maxRadius: 10
   delayBetweenCheck: 0.1
   canFirePlayer: 1
   playerInFov: 0
@@ -118,6 +123,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7169817831788984313}
+  generateRandomColors: 0
+  genre: 0
+  couleursHaut: []
+  couleursBas: []
+  meshRenderer: {fileID: 0}
 --- !u!1001 &5219945040121835929
 PrefabInstance:
   m_ObjectHideFlags: 0
