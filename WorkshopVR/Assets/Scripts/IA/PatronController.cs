@@ -15,6 +15,7 @@ public class PatronController : MonoBehaviour
     public float delaiIdleBureau = 10f;                 //Temps d'attente au bureau
     private Animator animator;
     [Header("Détection Joueur")]
+    public Transform tete;                              //Tete du patron pour détecter à partir de la
     public Transform player;                            //Joueur à détecter
     private DetectPlayerZone playerZone;                //Detection du joueur à son bureau
     public LayerMask layerDetectablesColliders;         //Objets détectables par le patron
@@ -56,13 +57,21 @@ public class PatronController : MonoBehaviour
             }
             else
             {
-                playerInFov = InFov(transform, player, maxAngle, maxRadius); //Vérifier si l'IA voit le joueur
+                playerInFov = InFov(tete, player, maxAngle, maxRadius); //Vérifier si l'IA voit le joueur
                 if (playerInFov)
                 {
                     //Si le joueur a un item illégal ou qu'il n'est pas dans sa zone alors il est viré
                     playerFired = playerZone.hasIllegalItem || !playerZone.playerInZone;
                 }
                 sdbc = delayBetweenCheck;
+            }
+
+            if(playerFired)
+            {
+                StopMovement(); //Arrêter le déplacement
+                animator.SetBool("PlayerSpotted", true);
+                etat = PatronState.PlayerSpotted;
+                return;
             }
         }
     }
@@ -83,6 +92,12 @@ public class PatronController : MonoBehaviour
         {
             SetNextCheckpointToReach();
         }
+    }
+
+    public void StopMovement()
+    {
+        agent.isStopped = true; //Arreter le mouvement du patron
+        nextCpToReach = null;
     }
 
     public void MoveToNextCheckpoint()
@@ -143,15 +158,15 @@ public class PatronController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, maxRadius); //Dessiner rayon de détection du patron
 
         //Rotater transform.forward de maxAngle degrés sur l'axe vertical et lui donner la taille du rayon pour faire le fov
-        Vector3 fovLine1 = Quaternion.AngleAxis(maxAngle, transform.up) * transform.forward * maxRadius;
-        Vector3 fovLine2 = Quaternion.AngleAxis(-maxAngle, transform.up) * transform.forward * maxRadius;
+        Vector3 fovLine1 = Quaternion.AngleAxis(maxAngle, tete.up) * tete.forward * maxRadius;
+        Vector3 fovLine2 = Quaternion.AngleAxis(-maxAngle, tete.up) * tete.forward * maxRadius;
         Gizmos.color = Color.blue;
-        Gizmos.DrawRay(transform.position, fovLine1);
-        Gizmos.DrawRay(transform.position, fovLine2);
+        Gizmos.DrawRay(tete.position, fovLine1);
+        Gizmos.DrawRay(tete.position, fovLine2);
 
         //Ray qui va du patron jusqu'à devant lui
         Gizmos.color = Color.black;
-        Gizmos.DrawRay(transform.position, transform.forward * maxRadius);
+        Gizmos.DrawRay(tete.position, tete.forward * maxRadius);
 
         //Ray qui va du patron au joueur
         if (player != null)
@@ -160,7 +175,7 @@ public class PatronController : MonoBehaviour
                 Gizmos.color = Color.red;
             else
                 Gizmos.color = Color.green;
-            Gizmos.DrawRay(transform.position, (player.position - transform.position).normalized * maxRadius);
+            Gizmos.DrawRay(tete.position, (player.position - tete.position).normalized * maxRadius);
         }
     }
 }
@@ -170,5 +185,6 @@ public enum PatronState
     IdleBureau,         //Quand le patron attend dans son bureau
     IdlePatrouille,     //Quand le patron attend pendant sa patrouille
     Patrouille,         //Quand le patron est en train de se déplacer
-    PlayerSpotted       //Quand le patron repère le joueurs
+    PlayerSpotted,      //Quand le patron repère le joueurs
+    Mort
 }

@@ -13,7 +13,7 @@ public class Item : MonoBehaviour
     {
         //Si l'objet subit une force trop grande, alors il casse
         float impactForce = collision.relativeVelocity.magnitude;
-        if(impactForce >= item.resistanceImpact && item.etat == EItemEtat.Normal)
+        if(impactForce >= item.resistanceImpact && item.etat == EItemEtat.Normal && item.type == EItemType.Destructible)
         {
             CasserItem();
         }
@@ -21,9 +21,8 @@ public class Item : MonoBehaviour
 
     public void CasserItem()
     {
-        Debug.Log(gameObject.name + " est cassé");
         item.etat = EItemEtat.Casse; //Passer l'état de l'item à cassé
-        //Changer la texture
+        //Spawn Particules
         MissionManager.instance.CheckDestructionMission(); //Refresh la mission du manager
     }
 }

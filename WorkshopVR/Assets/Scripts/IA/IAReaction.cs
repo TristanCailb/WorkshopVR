@@ -10,10 +10,14 @@ public class IAReaction : MonoBehaviour
     public Color[] couleursBas;
     public SkinnedMeshRenderer meshRenderer;
 
+    private PatronController patron;
+
     void Start()
     {
         if(animator == null)
             animator = GetComponent<Animator>();
+
+        patron = GetComponent<PatronController>(); //Récupérer le script du patron
 
         if(generateRandomColors) //Générer des couleurs random pour les habits des PNJ
         {
@@ -72,12 +76,25 @@ public class IAReaction : MonoBehaviour
     {
         animator.SetBool("IsHurt", true);
         MissionManager.instance.CheckReactionMission(item, EItemAction.Blesse, this);
+
+        if(patron != null)
+        {
+            patron.etat = PatronState.Mort;
+            patron.StopMovement();
+        }
     }
 
     public void OnTue(Item item)
     {
         animator.SetBool("IsDead", true);
         MissionManager.instance.CheckReactionMission(item, EItemAction.Tue, this);
+        MissionManager.instance.FearEverybody(); //Effrayer tout le monde quand un PNJ meurt
+
+        if(patron != null)
+        {
+            patron.etat = PatronState.Mort;
+            patron.StopMovement();
+        }
     }
 
     public void OnKillByGun(Item item)
@@ -85,6 +102,13 @@ public class IAReaction : MonoBehaviour
         //L'item est le projectile tiré
         animator.SetBool("IsDeadByGun", true);
         MissionManager.instance.CheckReactionMission(item, EItemAction.Tue, this);
+        MissionManager.instance.FearEverybody(); //Effrayer tout le monde quand un PNJ meurt
+
+        if(patron != null)
+        {
+            patron.etat = PatronState.Mort;
+            patron.StopMovement();
+        }
     }
 
     public void OnFear()

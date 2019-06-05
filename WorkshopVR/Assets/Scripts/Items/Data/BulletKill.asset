@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SItem
   nom: BulletKill
   desciption: Projectile qui tue
-  etat: 1
+  etat: 0
   type: 0
-  action: 2
+  action: 0
   isBullet: 1
   resistanceImpact: 10

@@ -17,6 +17,11 @@ public class MissionManager : MonoBehaviour
     private float totalMissions;                //Nombre total de missions
     private float missionsCompletes;            //Nombre de missions réussie
     private int pourcentageBurnout;             //Pourcentage du Burnout : Mathf.Round(normMissionProgress * 100f)
+    [Header("PNJ")]
+    public IAReaction[] pnjs;                   //PNJ à effrayer
+    public PatronController patron;             //Désactiver le repérage du joueur à un certain niveau
+    [Range(0f, 100f)]
+    public float limitPourcentageBurnout;       //Pourcentage de burnout à partir duquel le patron ne repère plus le joueur
 
 
     #region Singleton
@@ -84,6 +89,11 @@ public class MissionManager : MonoBehaviour
         pbFillBurnout.fillAmount = normMissionProgress;
         pourcentageBurnout = (int) Mathf.Round(normMissionProgress * 100f);
         txtPourcentageBurnout.text = pourcentageBurnout.ToString() + "%";
+
+        if(pourcentageBurnout >= limitPourcentageBurnout)
+        {
+            patron.canFirePlayer = false; //Désactiver le repérage du joueur s'il à atteint un burnout suffisant
+        }
     }
 
     public void RefreshMissionsActives()
@@ -246,6 +256,15 @@ public class MissionManager : MonoBehaviour
                     CompleterMission(i);
                 }
             }
+        }
+    }
+
+    public void FearEverybody()
+    {
+        //Faire peur à tous les PNJ
+        foreach(IAReaction pnj in pnjs)
+        {
+            pnj.OnFear();
         }
     }
 }

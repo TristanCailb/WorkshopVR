@@ -3201,7 +3201,7 @@ PrefabInstance:
     - target: {fileID: 7223880550401469020, guid: 585a49b479fc4ee448f69fe50a124ec8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.271
+      value: 0.044
       objectReference: {fileID: 0}
     - target: {fileID: 7223880550401469020, guid: 585a49b479fc4ee448f69fe50a124ec8,
         type: 3}
@@ -4246,6 +4246,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a83f807c7064ffc47a20e26df5785a0e, type: 3}
+--- !u!114 &669034476990885031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 319140590075938530, guid: a83f807c7064ffc47a20e26df5785a0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 669034476990885030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f734a4dd2998d1499f2e93beffa8c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1094749762949817483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4312,6 +4324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094749761189069219, guid: dc4aa08d7f8f50849ba6c7e9e1f75008,
+        type: 3}
+      propertyPath: isAuto
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc4aa08d7f8f50849ba6c7e9e1f75008, type: 3}
@@ -4945,6 +4962,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dacc566e47b9bf42b5a9141e0fded0b, type: 3}
+--- !u!114 &4842991491848857455 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4948314658547976242, guid: 3dacc566e47b9bf42b5a9141e0fded0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4842991491848857454}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f734a4dd2998d1499f2e93beffa8c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5006512734825498288 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 454713843082174942, guid: 3dacc566e47b9bf42b5a9141e0fded0b,
@@ -5158,6 +5187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7760841238988546605, guid: f2e777552339b5247bd4d3c7bee7c51e,
         type: 3}
+      propertyPath: pnjs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760841238988546605, guid: f2e777552339b5247bd4d3c7bee7c51e,
+        type: 3}
       propertyPath: missions.Array.data[0].objectifPlace.dropZones.Array.data[0]
       value: 
       objectReference: {fileID: 904545115}
@@ -5266,6 +5300,16 @@ PrefabInstance:
       propertyPath: txtPourcentageBurnout
       value: 
       objectReference: {fileID: 453865992}
+    - target: {fileID: 7760841238988546605, guid: f2e777552339b5247bd4d3c7bee7c51e,
+        type: 3}
+      propertyPath: pnjs.Array.data[0]
+      value: 
+      objectReference: {fileID: 4842991491848857455}
+    - target: {fileID: 7760841238988546605, guid: f2e777552339b5247bd4d3c7bee7c51e,
+        type: 3}
+      propertyPath: pnjs.Array.data[1]
+      value: 
+      objectReference: {fileID: 669034476990885031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2e777552339b5247bd4d3c7bee7c51e, type: 3}
 --- !u!1001 &8954172622502248554

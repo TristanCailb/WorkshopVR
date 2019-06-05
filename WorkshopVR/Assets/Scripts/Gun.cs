@@ -3,11 +3,17 @@ using VRTK;
 
 public class Gun : MonoBehaviour
 {
+    [Header("Base")]
     public VRTK_InteractableObject objetInteractif;     //Cet objet en général
     public GameObject projectile;                       //Prefab du projectile
     public Transform projectileSpawnPoint;              //Emplacement du tir
     public float projectileSpeed = 1000f;               //Vitesse du projectile
     public float projectileLife = 5f;                   //Durée de vie du projectile
+    [Header("Mode Auto")]
+    public bool isAuto;                                 //Si le gun est full auto
+    public float fireRate = 0.1f;                       //Délai entre 2 tirs
+    private float sfr;                                  //Save Fire Rate
+    private bool isShooting;                            //Si le joueur est en train de tirer
 
     void OnEnable()
     {
@@ -18,7 +24,9 @@ public class Gun : MonoBehaviour
         else
         {
             objetInteractif.InteractableObjectUsed += InteractableObjectUsed; //Ajouter cette fonction à appeler quand l'event est trigger
+            objetInteractif.InteractableObjectUnused += InteractableObjectUnused;
         }
+        sfr = fireRate;
     }
 
     void OnDisable()
@@ -26,12 +34,47 @@ public class Gun : MonoBehaviour
         if(objetInteractif != null)
         {
             objetInteractif.InteractableObjectUsed -= InteractableObjectUsed; //Retirer cette fonction quand l'objet est désactivé
+            objetInteractif.InteractableObjectUnused -= InteractableObjectUnused;
+        }
+    }
+
+    void Update()
+    {
+        if(isAuto)
+        {
+            if(isShooting)
+            {
+                if(sfr > 0f)
+                {
+                    sfr -= Time.deltaTime;
+                }
+                else
+                {
+                    Fire();
+                    sfr = fireRate;
+                }
+            }
         }
     }
 
     private void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
-        Fire(); //Tirer quand cette fonction est appelée par l'event
+        if (isAuto)
+        {
+            isShooting = true; //Démarer le tir
+        }
+        else
+        {
+            Fire(); //Tirer quand cette fonction est appelée par l'event
+        }
+    }
+
+    private void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
+    {
+        if(isAuto)
+        {
+            isShooting = false; //Arreter de tirer quand le joueur arrête
+        }
     }
 
     private void Fire()
