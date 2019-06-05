@@ -19,3 +19,5 @@ MonoBehaviour:
   action: 0
   isBullet: 1
   resistanceImpact: 10
+  destroyEffect: {fileID: 681667523512657660, guid: b7b79497f2e9bba4681e1010bec57109,
+    type: 3}

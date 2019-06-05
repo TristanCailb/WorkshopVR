@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SItem
   nom: Derange
   desciption: Cet objet derange les PNJ
-  etat: 0
+  etat: 1
   type: 1
   action: 0
+  isBullet: 0
   resistanceImpact: 5
+  destroyEffect: {fileID: 681667523512657660, guid: b7b79497f2e9bba4681e1010bec57109,
+    type: 3}

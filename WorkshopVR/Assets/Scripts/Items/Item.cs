@@ -22,7 +22,12 @@ public class Item : MonoBehaviour
     public void CasserItem()
     {
         item.etat = EItemEtat.Casse; //Passer l'état de l'item à cassé
-        //Spawn Particules
+
+        ParticleSystem ps = Instantiate(item.destroyEffect, transform.position, transform.rotation);
+        ParticleSystem.MainModule main = ps.main; //Récupérer le module principal des particules
+        main.startColor = GetComponent<MeshRenderer>().material.color; //Appliquer la couleur de l'item
+
         MissionManager.instance.CheckDestructionMission(); //Refresh la mission du manager
+        gameObject.SetActive(false);
     }
 }
