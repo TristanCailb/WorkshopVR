@@ -69,13 +69,16 @@
     <Compile Include="Assets\Scripts\AnimEvents.cs" />
     <Compile Include="Assets\Scripts\DetectPlayerZone.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
+    <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\Scripts\IA\Behaviours\IdleBureauBehaviour.cs" />
     <Compile Include="Assets\Scripts\IA\Behaviours\IdlePatrouilleBehavoiur.cs" />
     <Compile Include="Assets\Scripts\IA\Behaviours\PatrouilleBehaviour.cs" />
+    <Compile Include="Assets\Scripts\IA\BranScript.cs" />
     <Compile Include="Assets\Scripts\IA\IAReaction.cs" />
     <Compile Include="Assets\Scripts\IA\PatronController.cs" />
     <Compile Include="Assets\Scripts\Items\Item.cs" />
     <Compile Include="Assets\Scripts\Items\StructureItem.cs" />
+    <Compile Include="Assets\Scripts\KillZoneObjects.cs" />
     <Compile Include="Assets\Scripts\Missions\MissionManager.cs" />
     <Compile Include="Assets\Scripts\Missions\StructureMission.cs" />
     <Compile Include="Assets\Scripts\UIMontre\ScrollRectSnap.cs" />

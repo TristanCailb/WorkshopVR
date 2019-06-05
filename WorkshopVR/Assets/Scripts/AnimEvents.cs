@@ -2,11 +2,13 @@
 
 public class AnimEvents : MonoBehaviour
 {
-    private Animator animator;
+    public Animator animator;
+    public Collider colToDisable;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        if(animator == null)
+            animator = GetComponent<Animator>();
     }
 
     public void ResetDerange()
@@ -21,6 +23,6 @@ public class AnimEvents : MonoBehaviour
 
     public void DisableCollisions()
     {
-        GetComponent<Collider>().enabled = false;
+        colToDisable.enabled = false;
     }
 }

@@ -48,7 +48,14 @@ public class IAReaction : MonoBehaviour
                     OnBlesse(item);
                     break;
                 case EItemAction.Tue:
-                    OnTue(item);
+                    if(item.item.isBullet)
+                    {
+                        OnKillByGun(item);
+                    }
+                    else
+                    {
+                        OnTue(item);
+                    }
                     break;
                 default: break;
             }
