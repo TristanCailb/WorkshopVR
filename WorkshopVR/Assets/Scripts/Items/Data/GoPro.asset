@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GoPro
   m_EditorClassIdentifier: MyAssembly::SItem
   nom: GoPro
-  desciption: "Cam\xE9ra de surveillance"
+  desciption: 
   etat: 0
   type: 0
   action: 0
