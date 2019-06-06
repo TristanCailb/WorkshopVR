@@ -66,7 +66,6 @@
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
-    <Compile Include="Assets\rgi.cs" />
     <Compile Include="Assets\Scripts\AnimEvents.cs" />
     <Compile Include="Assets\Scripts\AutoDestroyEffects.cs" />
     <Compile Include="Assets\Scripts\DetectPlayerZone.cs" />
