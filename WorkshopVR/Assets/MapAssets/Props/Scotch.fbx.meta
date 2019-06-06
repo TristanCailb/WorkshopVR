@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Beige
+    second: {fileID: 2100000, guid: 7927911865af643449c874d34ab0fa9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Marron
     second: {fileID: 2100000, guid: 5e05263203a11f54bbd1d1e06d2bc304, type: 2}
   materials:
