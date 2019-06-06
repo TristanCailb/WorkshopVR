@@ -11,13 +11,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
   m_Name: Derange
-  m_EditorClassIdentifier: Assembly-CSharp::SItem
-  nom: Derange
-  desciption: Cet objet derange les PNJ
-  etat: 1
+  m_EditorClassIdentifier: MyAssembly::SItem
+  nom: "D\xE9range"
+  desciption: "Objet qui d\xE9range"
+  etat: 0
   type: 1
   action: 0
   isBullet: 0
-  resistanceImpact: 5
+  resistanceImpact: 10
   destroyEffect: {fileID: 681667523512657660, guid: b7b79497f2e9bba4681e1010bec57109,
     type: 3}

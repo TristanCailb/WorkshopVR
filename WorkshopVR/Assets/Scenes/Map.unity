@@ -9136,22 +9136,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectExitedSnapDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectSnappedToDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectUnsnappedFromDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &219092465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11604,6 +11604,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3396692031829658522, guid: f610f184ef1ddfe4bb34cc78382c1617,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: fd5bb0551424c6f43bfa50c5656fb313,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f610f184ef1ddfe4bb34cc78382c1617, type: 3}
 --- !u!1 &273741620 stripped
@@ -14746,11 +14752,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIMontreFollower
       objectReference: {fileID: 0}
-    - target: {fileID: 3915587147876309280, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3915587146302446852, guid: ee781409fe2342d45b6b808efc90c3cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14818,139 +14819,9 @@ PrefabInstance:
       objectReference: {fileID: 1433460097}
     - target: {fileID: 3915587147244493434, guid: ee781409fe2342d45b6b808efc90c3cd,
         type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartDrag
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147244493434, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1433460097}
-    - target: {fileID: 3915587147244493434, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndDrag
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147373280533, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147373280533, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147373280533, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147373280533, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147373280533, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147373280533, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587146628509279, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587146628509279, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587146628509279, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587146628509279, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587146628509279, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587146628509279, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147302093330, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147302093330, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147302093330, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147302093330, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147302093330, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147302093330, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147023092346, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147023092346, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147023092346, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147023092346, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147023092346, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915587147023092346, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee781409fe2342d45b6b808efc90c3cd, type: 3}
 --- !u!114 &346702783 stripped
@@ -23008,6 +22879,12 @@ PrefabInstance:
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: 85afda362701f7e4293a19e015d575ac, type: 2}
+    - target: {fileID: 3396692031829658522, guid: f610f184ef1ddfe4bb34cc78382c1617,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: fd5bb0551424c6f43bfa50c5656fb313,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f610f184ef1ddfe4bb34cc78382c1617, type: 3}
 --- !u!4 &600812560 stripped
@@ -25854,6 +25731,12 @@ PrefabInstance:
       propertyPath: limitPourcentageBurnout
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7760841238988546605, guid: f2e777552339b5247bd4d3c7bee7c51e,
+        type: 3}
+      propertyPath: missions.Array.data[0].objectifPlace.item
+      value: 
+      objectReference: {fileID: 11400000, guid: fd5bb0551424c6f43bfa50c5656fb313,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2e777552339b5247bd4d3c7bee7c51e, type: 3}
 --- !u!1 &647895558
@@ -28854,6 +28737,12 @@ PrefabInstance:
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: 8d7f5a3699442f74cb363cf81e1e5079, type: 2}
+    - target: {fileID: 3396692031829658522, guid: f610f184ef1ddfe4bb34cc78382c1617,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: fd5bb0551424c6f43bfa50c5656fb313,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f610f184ef1ddfe4bb34cc78382c1617, type: 3}
 --- !u!4 &731430611 stripped
@@ -33336,22 +33225,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectExitedSnapDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectSnappedToDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectUnsnappedFromDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &817516947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34710,6 +34599,12 @@ PrefabInstance:
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: 1e2b32879f21570488f454c1025b4b35, type: 2}
+    - target: {fileID: 3396692031829658522, guid: f610f184ef1ddfe4bb34cc78382c1617,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: fd5bb0551424c6f43bfa50c5656fb313,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f610f184ef1ddfe4bb34cc78382c1617, type: 3}
 --- !u!4 &841649039 stripped
@@ -39977,22 +39872,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectExitedSnapDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectSnappedToDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectUnsnappedFromDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &988695281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56597,22 +56492,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectExitedSnapDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectSnappedToDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectUnsnappedFromDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1367291275
 MonoBehaviour:
   m_ObjectHideFlags: 0
