@@ -122,16 +122,19 @@ public class MissionManager : MonoBehaviour
 
         foreach(SMission m in missions)
         {
-            if(m.etat == EEtatMission.Active)
+            if(m.etat != EEtatMission.EnAttente)
             {
                 //Créer le prefab de mission HUD
                 GameObject hud = Instantiate(missionHudPrefab, missionsHolder.transform.position, missionsHolder.transform.rotation, missionsHolder.transform);
                 Text titre = hud.transform.Find("TXT_Titre").GetComponent<Text>(); //Récupérer le titre
                 Text description = hud.transform.Find("TXT_Description").GetComponent<Text>(); //Récupérer la description
                 Text objectif = hud.transform.Find("TXT_Objectifs").GetComponent<Text>(); //Récupérer les objectifs
+                Image tick = hud.transform.Find("CB_Mission").Find("IMG_Tick").GetComponent<Image>(); //Récupérer le tick
                 titre.text = m.titre; //Ecrire le titre dans le HUD
                 description.text = m.description; //Ecrire la description dans le HUD
                 objectif.text = "Objectif :\n  - " + m.objectif; //Ecrire l'objectif dans le HUD
+                if (m.etat != EEtatMission.Completee) tick.gameObject.SetActive(false);
+                else tick.gameObject.SetActive(true); //Cocher la checkbox
             }
         }
     }

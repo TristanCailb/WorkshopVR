@@ -11,13 +11,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
   m_Name: BulletKill
-  m_EditorClassIdentifier: Assembly-CSharp::SItem
-  nom: BulletKill
-  desciption: Projectile qui tue
+  m_EditorClassIdentifier: MyAssembly::SItem
+  nom: Projectile
+  desciption: Balle qui tue
   etat: 0
   type: 0
-  action: 0
+  action: 2
   isBullet: 1
   resistanceImpact: 10
-  destroyEffect: {fileID: 681667523512657660, guid: b7b79497f2e9bba4681e1010bec57109,
-    type: 3}
+  destroyEffect: {fileID: 0}

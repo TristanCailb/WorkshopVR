@@ -1,0 +1,2 @@
+C:\Users\Admin\Documents\Cours\Cours B2 Game\WorkshopVR\WorkshopVR\obj\Debug\Assembly-CSharp-Editor.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\Cours\Cours B2 Game\WorkshopVR\WorkshopVR\obj\Debug\Assembly-CSharp-Editor.csproj.CoreCompileInputs.cache
