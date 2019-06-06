@@ -56,6 +56,10 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 1094749763106786527}
   projectileSpeed: 1000
   projectileLife: 5
+  isAuto: 0
+  fireRate: 0.1
+  muzzleFlashEffect: {fileID: 3830853021027375625, guid: 0ee2e7b2c63d3ce43b6a67c4e55edff6,
+    type: 3}
 --- !u!114 &1094749761189069228
 MonoBehaviour:
   m_ObjectHideFlags: 0

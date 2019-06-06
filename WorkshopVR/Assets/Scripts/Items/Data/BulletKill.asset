@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: BulletKill
   m_EditorClassIdentifier: MyAssembly::SItem
-  nom: Projectile
-  desciption: Balle qui tue
+  nom: 
+  desciption: 
   etat: 0
   type: 0
   action: 2

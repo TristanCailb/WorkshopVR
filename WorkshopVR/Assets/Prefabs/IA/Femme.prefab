@@ -213,6 +213,10 @@ MonoBehaviour:
   - {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
   - {r: 0.6179246, g: 0.9960564, b: 1, a: 1}
   meshRenderer: {fileID: 3134734848478012007}
+  bloodEffectHurt: {fileID: 8238169584944978183, guid: 338bb98c71b549449b4d9ade0b6e6cec,
+    type: 3}
+  bloodEffectDie: {fileID: 7359870466278184310, guid: 457963f1445495c4486402c7971fccd4,
+    type: 3}
 --- !u!1 &769107834832172542
 GameObject:
   m_ObjectHideFlags: 0

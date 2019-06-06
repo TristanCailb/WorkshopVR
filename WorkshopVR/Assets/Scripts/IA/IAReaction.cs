@@ -9,6 +9,9 @@ public class IAReaction : MonoBehaviour
     public Color[] couleursHaut;
     public Color[] couleursBas;
     public SkinnedMeshRenderer meshRenderer;
+    [Header("Particules")]
+    public GameObject bloodEffectHurt;
+    public GameObject bloodEffectDie;
 
     private PatronController patron;
 
@@ -49,16 +52,16 @@ public class IAReaction : MonoBehaviour
                     OnDerange(item);
                     break;
                 case EItemAction.Blesse:
-                    OnBlesse(item);
+                    OnBlesse(item, col.GetContact(0).point, Quaternion.Euler(col.GetContact(0).normal));
                     break;
                 case EItemAction.Tue:
                     if(item.item.isBullet)
                     {
-                        OnKillByGun(item);
+                        OnKillByGun(item, col.GetContact(0).point, Quaternion.Euler(col.GetContact(0).normal));
                     }
                     else
                     {
-                        OnTue(item);
+                        OnTue(item, col.GetContact(0).point, Quaternion.Euler(col.GetContact(0).normal));
                     }
                     break;
                 default: break;
@@ -72,10 +75,11 @@ public class IAReaction : MonoBehaviour
         MissionManager.instance.CheckReactionMission(item, EItemAction.Derange, this);
     }
 
-    public void OnBlesse(Item item)
+    public void OnBlesse(Item item, Vector3 impactPos, Quaternion rotation)
     {
         animator.SetBool("IsHurt", true);
         MissionManager.instance.CheckReactionMission(item, EItemAction.Blesse, this);
+        Instantiate(bloodEffectHurt, impactPos, rotation); //Particules de sang 1
 
         if(patron != null)
         {
@@ -84,27 +88,29 @@ public class IAReaction : MonoBehaviour
         }
     }
 
-    public void OnTue(Item item)
+    public void OnTue(Item item, Vector3 impactPos, Quaternion rotation)
     {
         animator.SetBool("IsDead", true);
         MissionManager.instance.CheckReactionMission(item, EItemAction.Tue, this);
         MissionManager.instance.FearEverybody(); //Effrayer tout le monde quand un PNJ meurt
+        Instantiate(bloodEffectDie, impactPos, rotation); //Particules de sang 2
 
-        if(patron != null)
+        if (patron != null)
         {
             patron.etat = PatronState.Mort;
             patron.StopMovement();
         }
     }
 
-    public void OnKillByGun(Item item)
+    public void OnKillByGun(Item item, Vector3 impactPos, Quaternion rotation)
     {
         //L'item est le projectile tiré
         animator.SetBool("IsDeadByGun", true);
         MissionManager.instance.CheckReactionMission(item, EItemAction.Tue, this);
         MissionManager.instance.FearEverybody(); //Effrayer tout le monde quand un PNJ meurt
+        Instantiate(bloodEffectDie, impactPos, rotation); //Particules de sang 2
 
-        if(patron != null)
+        if (patron != null)
         {
             patron.etat = PatronState.Mort;
             patron.StopMovement();

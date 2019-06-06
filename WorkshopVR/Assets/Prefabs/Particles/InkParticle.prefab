@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8945190078614218634}
   - component: {fileID: 8945190078614218635}
   - component: {fileID: 8945190078614218636}
+  - component: {fileID: 9166458992641875525}
   m_Layer: 0
   m_Name: InkParticle
   m_TagString: Untagged
@@ -48,7 +49,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -4810,3 +4811,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &9166458992641875525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8945190078614218637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff5eec29174e4b4b9176b1360d05dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

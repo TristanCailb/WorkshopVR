@@ -390,9 +390,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -6.25207, y: -3.7635727, z: -7.7045903}
+    m_Target: {x: 4.824186, y: 2.307829, z: 7.2615056}
     speed: 2
-    m_Value: {x: -6.25207, y: -3.7635727, z: -7.7045903}
+    m_Value: {x: 4.824186, y: 2.307829, z: 7.2615056}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -421,13 +421,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.13810506, y: 0.8464819, z: -0.26546693, w: -0.44036877}
+    m_Target: {x: 0.00068602676, y: 0.98972964, z: -0.14290579, w: 0.004746704}
     speed: 2
-    m_Value: {x: -0.13916527, y: 0.8454208, z: -0.26652765, w: -0.44142932}
+    m_Value: {x: 0.0011147349, y: 0.9897061, z: -0.14290237, w: 0.007715829}
   m_Size:
-    m_Target: 11.563694
+    m_Target: 0.71842426
     speed: 2
-    m_Value: 11.563694
+    m_Value: 0.71842426
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -483,7 +483,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 343ffbff5449fbff6a58fbff3a9afbff0050fdff0450fdff1a50fdff7859fdffb863fdffbc44fefff450feff4868feff18b8ffff7cbfffffdaf9ffff0a8400001e1502001e180200641a0200101d0200501e0200be230200cc260200fa2702005428020074280200b29f0200b2a20200f8a40200a4a7020052ae020060b10200e8b2020008b30200683404009c350400
+      m_ExpandedIDs: 0ef9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -545,7 +545,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs/Particles
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -557,7 +557,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 32260000
     m_LastClickedID: 9778
-    m_ExpandedIDs: 00000000c2350000827b0000847b0000
+    m_ExpandedIDs: 00000000c8350000fc3f0000ca460000366c0000386c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -582,10 +582,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 60}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000c2350000827b0000847b0000ba7b0000dea80000
+    m_ExpandedIDs: ffffffff00000000c8350000ba360000ca46000078470000366c0000386c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

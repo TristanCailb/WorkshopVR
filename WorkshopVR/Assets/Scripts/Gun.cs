@@ -14,6 +14,8 @@ public class Gun : MonoBehaviour
     public float fireRate = 0.1f;                       //Délai entre 2 tirs
     private float sfr;                                  //Save Fire Rate
     private bool isShooting;                            //Si le joueur est en train de tirer
+    [Header("Particules")]
+    public GameObject muzzleFlashEffect;                //Particules de tir
 
     void OnEnable()
     {
@@ -84,6 +86,7 @@ public class Gun : MonoBehaviour
             //Instancier le projectile
             GameObject clonedProjectile = Instantiate(projectile, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
             Rigidbody projectileRigidbody = clonedProjectile.GetComponent<Rigidbody>(); //Récupérer le rigidbody
+            Instantiate(muzzleFlashEffect, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
             float destroyTime = 0f;
             if (projectileRigidbody != null) //Si le rigidbody existe
             {
