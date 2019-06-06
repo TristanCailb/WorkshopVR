@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3420947668978504019}
   - component: {fileID: 3420947668978504018}
-  - component: {fileID: 3420947668978504016}
   - component: {fileID: 3420947668978504017}
+  - component: {fileID: 912731809}
   m_Layer: 10
   m_Name: PlayerPos
   m_TagString: Untagged
@@ -46,19 +46,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3420947668978504016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3420947668978504021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be0c4aa814518cb4b95fadb2999e5245, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: {x: 0, y: 1, z: 0}
 --- !u!114 &3420947668978504017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,3 +60,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInZone: 0
   hasIllegalItem: 0
+--- !u!114 &912731809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3420947668978504021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe5040c2eaa9ff147b80ded004191c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectToFollow: {fileID: 0}
+  gameObjectToChange: {fileID: 0}
+  followsPosition: 1
+  smoothsPosition: 0
+  maxAllowedPerFrameDistanceDifference: 0.003
+  followsRotation: 1
+  smoothsRotation: 0
+  maxAllowedPerFrameAngleDifference: 1.5
+  followsScale: 1
+  smoothsScale: 0
+  maxAllowedPerFrameSizeDifference: 0.003
+  _moment: 3
