@@ -449,6 +449,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3396692031829658522, guid: f610f184ef1ddfe4bb34cc78382c1617,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: fd5bb0551424c6f43bfa50c5656fb313,
+        type: 2}
     - target: {fileID: 8954172623101259638, guid: f610f184ef1ddfe4bb34cc78382c1617,
         type: 3}
       propertyPath: m_TargetTexture
@@ -474,12 +480,6 @@ PrefabInstance:
       propertyPath: ignoredColliders.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3396692031829658522, guid: f610f184ef1ddfe4bb34cc78382c1617,
-        type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 7bc3673c76e5bd2459d5839dff3dd824,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f610f184ef1ddfe4bb34cc78382c1617, type: 3}
 --- !u!114 &273300031 stripped
@@ -654,22 +654,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectExitedSnapDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectSnappedToDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectUnsnappedFromDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &395221748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,22 +856,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectExitedSnapDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectSnappedToDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectUnsnappedFromDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &403436011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,6 +1187,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3396692031829658522, guid: f610f184ef1ddfe4bb34cc78382c1617,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: fd5bb0551424c6f43bfa50c5656fb313,
+        type: 2}
     - target: {fileID: 8954172623101259638, guid: f610f184ef1ddfe4bb34cc78382c1617,
         type: 3}
       propertyPath: m_TargetTexture
@@ -1212,12 +1218,6 @@ PrefabInstance:
       propertyPath: ignoredColliders.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3396692031829658522, guid: f610f184ef1ddfe4bb34cc78382c1617,
-        type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 7bc3673c76e5bd2459d5839dff3dd824,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f610f184ef1ddfe4bb34cc78382c1617, type: 3}
 --- !u!1 &630559779 stripped
@@ -1744,6 +1744,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3396692031829658522, guid: f610f184ef1ddfe4bb34cc78382c1617,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: fd5bb0551424c6f43bfa50c5656fb313,
+        type: 2}
     - target: {fileID: 8954172623101259638, guid: f610f184ef1ddfe4bb34cc78382c1617,
         type: 3}
       propertyPath: m_TargetTexture
@@ -1769,12 +1775,6 @@ PrefabInstance:
       propertyPath: ignoredColliders.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3396692031829658522, guid: f610f184ef1ddfe4bb34cc78382c1617,
-        type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 7bc3673c76e5bd2459d5839dff3dd824,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f610f184ef1ddfe4bb34cc78382c1617, type: 3}
 --- !u!1001 &904545107
@@ -1963,22 +1963,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectExitedSnapDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectSnappedToDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectUnsnappedFromDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &958781018
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,6 +2056,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958781018}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &992974397
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5547691451636856484, guid: 8bf5c9f05fd4a264dbd2a26a31863f69,
+        type: 3}
+      propertyPath: m_Name
+      value: Commode
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547691451636856485, guid: 8bf5c9f05fd4a264dbd2a26a31863f69,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.185
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547691451636856485, guid: 8bf5c9f05fd4a264dbd2a26a31863f69,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.382
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547691451636856485, guid: 8bf5c9f05fd4a264dbd2a26a31863f69,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547691451636856485, guid: 8bf5c9f05fd4a264dbd2a26a31863f69,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547691451636856485, guid: 8bf5c9f05fd4a264dbd2a26a31863f69,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547691451636856485, guid: 8bf5c9f05fd4a264dbd2a26a31863f69,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547691451636856485, guid: 8bf5c9f05fd4a264dbd2a26a31863f69,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547691451636856485, guid: 8bf5c9f05fd4a264dbd2a26a31863f69,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547691451636856485, guid: 8bf5c9f05fd4a264dbd2a26a31863f69,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547691451636856485, guid: 8bf5c9f05fd4a264dbd2a26a31863f69,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547691451636856485, guid: 8bf5c9f05fd4a264dbd2a26a31863f69,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90.00001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bf5c9f05fd4a264dbd2a26a31863f69, type: 3}
 --- !u!4 &1006633398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2111556994245368619, guid: e8537f6439123054c80e7ade8bd3159e,
@@ -3772,22 +3841,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectExitedSnapDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectSnappedToDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnObjectUnsnappedFromDropZone:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: VRTK.UnityEventHelper.VRTK_SnapDropZone_UnityEvents+SnapDropZoneEvent,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      MyAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &2018968959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4090,7 +4159,7 @@ PrefabInstance:
         type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: e1d4b3269f21cb64e922512e9eaf3f7a,
+      objectReference: {fileID: 11400000, guid: 315d1c8912b0554498432c944f1b9fc2,
         type: 2}
     - target: {fileID: 2111556994245368662, guid: e8537f6439123054c80e7ade8bd3159e,
         type: 3}
@@ -4180,7 +4249,7 @@ PrefabInstance:
         type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 7f25653489c5b4f4b8fb0d3aa368c017,
+      objectReference: {fileID: 11400000, guid: 315d1c8912b0554498432c944f1b9fc2,
         type: 2}
     - target: {fileID: 7984979895137398861, guid: d6ad19b0337cb5b48b9031c6447822c2,
         type: 3}
@@ -4425,7 +4494,7 @@ PrefabInstance:
         type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 7f25653489c5b4f4b8fb0d3aa368c017,
+      objectReference: {fileID: 11400000, guid: 315d1c8912b0554498432c944f1b9fc2,
         type: 2}
     - target: {fileID: 2111556994245368662, guid: e8537f6439123054c80e7ade8bd3159e,
         type: 3}
@@ -4515,11 +4584,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIMontreFollower
       objectReference: {fileID: 0}
-    - target: {fileID: 3915587147876309280, guid: ee781409fe2342d45b6b808efc90c3cd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3915587146302446852, guid: ee781409fe2342d45b6b808efc90c3cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4590,6 +4654,11 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 273300031}
+    - target: {fileID: 3915587147876309280, guid: ee781409fe2342d45b6b808efc90c3cd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3915587147373280533, guid: ee781409fe2342d45b6b808efc90c3cd,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -5164,27 +5233,27 @@ PrefabInstance:
       propertyPath: uiMontre
       value: 
       objectReference: {fileID: 1773983397}
+    - target: {fileID: 156792664, guid: b74abcebdaac19140b1b20cfc9b12b1c, type: 3}
+      propertyPath: OnControllerStartGrabInteractableObject.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 630559783}
+    - target: {fileID: 156792664, guid: b74abcebdaac19140b1b20cfc9b12b1c, type: 3}
+      propertyPath: OnControllerStartUngrabInteractableObject.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 630559783}
+    - target: {fileID: 1371198820, guid: b74abcebdaac19140b1b20cfc9b12b1c, type: 3}
+      propertyPath: OnControllerStartGrabInteractableObject.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 630559783}
+    - target: {fileID: 1371198820, guid: b74abcebdaac19140b1b20cfc9b12b1c, type: 3}
+      propertyPath: OnControllerStartUngrabInteractableObject.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 630559783}
     - target: {fileID: 5969564654736007799, guid: b74abcebdaac19140b1b20cfc9b12b1c,
         type: 3}
       propertyPath: ignoreCollisionsWith.Array.data[0]
       value: 
       objectReference: {fileID: 630559779}
-    - target: {fileID: 156792664, guid: b74abcebdaac19140b1b20cfc9b12b1c, type: 3}
-      propertyPath: OnControllerStartGrabInteractableObject.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 630559783}
-    - target: {fileID: 156792664, guid: b74abcebdaac19140b1b20cfc9b12b1c, type: 3}
-      propertyPath: OnControllerStartUngrabInteractableObject.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 630559783}
-    - target: {fileID: 1371198820, guid: b74abcebdaac19140b1b20cfc9b12b1c, type: 3}
-      propertyPath: OnControllerStartGrabInteractableObject.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 630559783}
-    - target: {fileID: 1371198820, guid: b74abcebdaac19140b1b20cfc9b12b1c, type: 3}
-      propertyPath: OnControllerStartUngrabInteractableObject.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 630559783}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b74abcebdaac19140b1b20cfc9b12b1c, type: 3}
 --- !u!1 &6008054683302431626 stripped
@@ -5465,6 +5534,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3396692031829658522, guid: f610f184ef1ddfe4bb34cc78382c1617,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: fd5bb0551424c6f43bfa50c5656fb313,
+        type: 2}
     - target: {fileID: 3396692031829658598, guid: f610f184ef1ddfe4bb34cc78382c1617,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
