@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: cda4417a5e21ea5438621f963071cb9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Rouge
     second: {fileID: 2100000, guid: 1a5d7dd2ddfd2ee4aa667f051ce975af, type: 2}
   materials:

@@ -16,7 +16,7 @@ MonoBehaviour:
   desciption: 
   etat: 0
   type: 0
-  action: 2
-  isBullet: 1
+  action: 0
+  isBullet: 0
   resistanceImpact: 10
   destroyEffect: {fileID: 0}

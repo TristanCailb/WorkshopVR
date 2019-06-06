@@ -19,6 +19,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Noir
     second: {fileID: 2100000, guid: 6cda3067b5422d04d9e930e83b69dbeb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vitre
+    second: {fileID: 2100000, guid: ba2e5b72694473f48a6892536ed66140, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
