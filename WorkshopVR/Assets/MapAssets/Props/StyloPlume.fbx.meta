@@ -8,8 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BleuCiel
-    second: {fileID: -4474824036887785974, guid: 8b3eb3ca6ca1b4341af013ab539ca8af,
-      type: 3}
+    second: {fileID: 2100000, guid: 212da3468bc949f4499590b86edf4595, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
