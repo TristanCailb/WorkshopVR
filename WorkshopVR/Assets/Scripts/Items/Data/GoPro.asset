@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: GoPro
   m_EditorClassIdentifier: MyAssembly::SItem
-  nom: GoPro
+  nom: 
   desciption: 
   etat: 0
   type: 0
