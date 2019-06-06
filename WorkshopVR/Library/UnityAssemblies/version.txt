@@ -61,9 +61,16 @@ C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\Managed/UnityEngine/Uni
 C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\Managed/UnityEditor.dll
 C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\Managed/Unity.Locator.dll
 C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
+C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll
+C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll
+C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/Managed/UnityEditor.Graphs.dll
+C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
+C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
+C:/Users/Admin/Desktop/Uzur/WorkshopVR/WorkshopVR/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
 C:/Users/Admin/Desktop/Uzur/WorkshopVR/WorkshopVR/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll
 C:/Users/Admin/Desktop/Uzur/WorkshopVR/WorkshopVR/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll
 C:/Users/Admin/Desktop/Uzur/WorkshopVR/WorkshopVR/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll
+C:/Users/Admin/Desktop/Uzur/WorkshopVR/WorkshopVR/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll
 C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll
 C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\Microsoft.Win32.Primitives.dll
 C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard\System.AppContext.dll
@@ -179,13 +186,6 @@ C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\NetStandard\compat\2.0.
 C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.dll
 C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Linq.dll
 C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll
-C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll
-C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll
-C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/Managed/UnityEditor.Graphs.dll
-C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
-C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
-C:/Users/Admin/Desktop/Uzur/WorkshopVR/WorkshopVR/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
-C:/Users/Admin/Desktop/Uzur/WorkshopVR/WorkshopVR/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll
 C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll
 C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\System.dll
 C:\Program Files\Unity\Hub\Editor\2019.1.4f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\System.Core.dll
