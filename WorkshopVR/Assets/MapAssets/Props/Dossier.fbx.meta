@@ -3,7 +3,17 @@ guid: 87faf4ff60591b84cac8f896f766ba5d
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blanc
+    second: {fileID: 2100000, guid: 254445dd0ee58354a85c5279a6dc0237, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Vert Fonc\xE9"
+    second: {fileID: 2100000, guid: 9c215aacc92295c4082d9820b8caebf6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

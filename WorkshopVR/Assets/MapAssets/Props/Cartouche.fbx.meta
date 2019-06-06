@@ -3,7 +3,17 @@ guid: bf22af1fbb79aa6428ad87f93ef3b91f
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blanc
+    second: {fileID: 2100000, guid: 254445dd0ee58354a85c5279a6dc0237, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Encre
+    second: {fileID: 2100000, guid: 283c56e3f27f89b41abac9cf7c9aa8a9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
