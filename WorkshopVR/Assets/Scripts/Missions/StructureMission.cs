@@ -104,7 +104,7 @@ public class SDetruire //Structure de la mission de destruction d'objets
         itemsInGame = new List<Item>();
         foreach(Item i in GameObject.FindObjectsOfType<Item>())
         {
-            if(i.item.type == EItemType.Destructible)
+            if(i.type == EItemType.Destructible)
             {
                 itemsInGame.Add(i);
             }
@@ -118,7 +118,7 @@ public class SDetruire //Structure de la mission de destruction d'objets
         nbItemsCasses = 0f;
         foreach(Item i in itemsInGame)
         {
-            if(i.item.etat == EItemEtat.Casse)
+            if(i.etat == EItemEtat.Casse)
             {
                 nbItemsCasses++;
             }

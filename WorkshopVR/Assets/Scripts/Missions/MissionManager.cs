@@ -200,7 +200,7 @@ public class MissionManager : MonoBehaviour
             SMission mission = missions[i];
             if (mission.etat == EEtatMission.Active) //Si c'est une mission active
             {
-                if (item.item.action == action) //Vérifier si l'action de l'item reçue est celle voulue
+                if (item.action == action) //Vérifier si l'action de l'item reçue est celle voulue
                 {
                     switch(mission.typeMission) //Vérifier le type de mission
                     {
